@@ -10,7 +10,7 @@ Understand the **core mechanics of RAG** by building a minimal working example a
 
 - Loading a plain-text knowledge base
 - Splitting it into paragraph-based chunks
-- Embedding chunks with `paraphrase-multilingual-mpnet-base-v2` (runs locally)
+- Embedding chunks with `BAAI/bge-m3` (runs locally, strong on Vietnamese)
 - Storing the vectors in a FAISS index
 - Retrieving the most relevant chunks for a question
 - Building a RAG prompt from the retrieved context
@@ -40,17 +40,15 @@ Requires Python 3.12 or another recent version.
    pip install -r requirements.txt
    ```
 
-4. Create a `.env` file in the root directory:
-   ```
-   OPENAI_API_KEY=your_key_here
-   OPENAI_API_BASE=https://api.openai.com/v1
-   MODEL_ECONOMY=gpt-4o-mini
+4. Copy `.env.example` to `.env` and fill in your key:
+   ```bash
+   cp .env.example .env
    ```
    Get a key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys). `.env` is excluded via `.gitignore` and never committed.
 
 5. Open `simple_rag_project.ipynb` and run the cells top to bottom.
 
-On the first run, the notebook downloads the embedding model (about 1 GB) and caches it locally.
+On the first run, the notebook downloads the embedding model (about 2.3 GB) and caches it locally.
 
 ## Configuration
 

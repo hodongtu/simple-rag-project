@@ -1,0 +1,24 @@
+# Secrets (.env.example stays tracked)
+.env
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model / package caches
+.cache/
+
+# Editors
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
